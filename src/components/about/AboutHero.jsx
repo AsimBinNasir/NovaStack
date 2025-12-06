@@ -1,5 +1,3 @@
-// AboutHero.jsx
-
 import React from 'react';
 
 // Configuration for the schematic nodes representing the network architecture
@@ -24,7 +22,6 @@ const BEAMS = [
   { d: "M600 450 Q 500 375 400 300", delay: 2 },
 ];
 
-// The ': React.FC' type annotation is removed
 export const AboutHero = () => {
   return (
     <section className="container mx-auto px-6 py-20 md:py-28">

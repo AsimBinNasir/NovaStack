@@ -1,10 +1,6 @@
-// Services.jsx
-
 import React from 'react';
-// Lucide icons are used for visual appeal in the service boxes
 import { Cloud, ShieldCheck, Cpu, Database, Globe, Zap } from 'lucide-react';
 
-// The ServiceItem interface is removed, but the data structure remains
 const services = [
   {
     title: "Cloud Migration",
@@ -32,7 +28,6 @@ const services = [
   },
 ];
 
-// The ': React.FC' type annotation is removed
 export const Services = () => {
   return (
     <section id="services" className="py-24 relative">
@@ -48,7 +43,6 @@ export const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {services.map((service, index) => (
             <div 
-              // Using index as a key is okay if the list order is static
               key={index} 
               className={`
                 group relative p-8 bg-white/5 border border-white/10 backdrop-blur-sm 

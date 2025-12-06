@@ -1,23 +1,15 @@
-// Footer.jsx
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Twitter, Linkedin, Github, Mail } from 'lucide-react';
 
-// The ': React.FC' type annotation is removed
 export const Footer = () => {
   const navigate = useNavigate();
 
   // Function to navigate to home and scroll to the top of the page
   const handleHomeClick = (e) => {
-    e.preventDefault(); // Prevent default link behavior
-    
-    // 1. Navigate to the home path.
-    // If the user is already on the home page, this does nothing but change the history state.
+    e.preventDefault(); 
     navigate('/');
 
-    // 2. Scroll to the top of the viewport.
-    // The smooth scrolling effect is handled by the global CSS rule on <html>.
     window.scrollTo(0, 0); 
   };
 
@@ -73,7 +65,6 @@ export const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-white/40">
-          {/* Using JavaScript to get the current year for the copyright date */}
           <p>&copy; {new Date().getFullYear()} NovaStack Inc. All rights reserved.</p> 
           <div className="flex space-x-8 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

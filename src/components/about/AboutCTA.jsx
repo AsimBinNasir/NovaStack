@@ -3,7 +3,6 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { useNavigate } from 'react-router-dom';
 
-// The ': React.FC' type annotation is removed
 export const AboutCTA = () => {
   const navigate = useNavigate();
 

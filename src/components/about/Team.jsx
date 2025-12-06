@@ -1,8 +1,5 @@
-// Team.jsx
-
 import React from 'react';
 
-// The TeamMember interface is removed, and the data structure remains in JS
 export const Team = () => {
   const members = [
     { 

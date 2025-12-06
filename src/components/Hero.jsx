@@ -1,16 +1,10 @@
-// Hero.jsx
-
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-// Assuming the Button component is correctly defined in './ui/Button'
 import  { Button }  from './ui/Button'; 
 
-// Removed the ': React.FC' type annotation
 export const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center pt-20 relative overflow-hidden">
-      {/* Abstract Background Element */}
-      {/* Note: Tailwind colors like nova-blue/20 must be defined in your tailwind.config.js */}
       <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 w-[800px] h-[800px] bg-nova-blue/20 rounded-full blur-3xl pointer-events-none mix-blend-overlay"></div>
 
       <div className="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
@@ -28,8 +22,7 @@ export const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            {/* The Button component needs access to the navigate function if it handles routing,
-                or you would wrap it in a custom component that calls navigate. */}
+            
             <Button size="lg" className="group">
               Get Started
               <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -44,7 +37,6 @@ export const Hero = () => {
         <div className="hidden md:flex justify-center items-center h-full relative">
           <div className="relative w-full aspect-square max-w-md">
             {/* Decorative Sharp Elements */}
-            {/* Note: Animation classes must be defined in your tailwind.config.js */}
             <div className="absolute inset-0 border border-white/10 animate-spin-slow"></div>
             <div className="absolute inset-4 border border-white/20 animate-spin-reverse-slow bg-white/5 backdrop-blur-sm"></div>
             <div className="absolute inset-12 border-2 border-nova-peach/30 animate-spin-slower flex items-center justify-center bg-nova-dark/20 backdrop-blur-md">

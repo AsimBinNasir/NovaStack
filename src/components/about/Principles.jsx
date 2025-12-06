@@ -22,13 +22,11 @@ const PrincipleCard = ({ icon: Icon, title, description, theme }) => { // eslint
     <div className={`p-10 border border-white/10 bg-nova-dark/40 backdrop-blur-md relative overflow-hidden group ${c.borderHover} transition-colors duration-300`}>
       {/* Background Large Icon Watermark */}
       <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
-        {/* The Icon is used here! */}
         <Icon size={120} strokeWidth={1} />
       </div>
 
       <div className="relative z-10">
         <div className={`w-16 h-16 ${c.iconBg} flex items-center justify-center mb-6 ${c.iconText} border ${c.iconBorder}`}>
-          {/* And here! */}
           <Icon className="w-8 h-8" />
         </div>
         <h3 className="text-2xl font-bold mb-4 font-display text-white">{title}</h3>

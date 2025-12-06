@@ -1,6 +1,6 @@
 import React from 'react'
 import { Menu, X } from 'lucide-react';
-import { useNavigate, useLocation } from 'react-router-dom'; // <-- Import useLocation
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 const navItems = [
@@ -15,7 +15,7 @@ const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const navigate = useNavigate();
-    const location = useLocation(); // <-- Initialize useLocation
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -47,7 +47,6 @@ const Header = () => {
             : 'bg-transparent border-transparent py-6'
             }`}>
             <div className="container mx-auto px-6 flex justify-between items-center">
-                {/* ... Logo JSX remains the same ... */}
                 <div
                     className="flex items-center gap-3 group cursor-pointer"
                     onClick={handleClick}
@@ -84,7 +83,7 @@ const Header = () => {
                                 className="text-sm font-medium text-white/80 hover:text-white relative group cursor-pointer"
                             >
                                 {item.name}
-                                {/* UPDATED: The width is now conditionally set */}
+                               
                                 <span className={`absolute -bottom-1 left-0 h-0.5 bg-nova-peach transition-all duration-300 ${widthClass} group-hover:w-full`}></span>
                             </a>
                         );
@@ -101,7 +100,7 @@ const Header = () => {
                 </button>
             </div>
 
-            {/* Mobile Nav Overlay (You might want to apply active styling here too) */}
+            {/* Mobile Nav Overlay*/}
             {isMobileMenuOpen && (
                 <div className="md:hidden absolute top-full left-0 w-full bg-nova-dark/95 backdrop-blur-xl border-b border-white/10 p-6 flex flex-col space-y-4">
                     {navItems.map((item) => (

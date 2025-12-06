@@ -1,9 +1,6 @@
-// Testimonials.jsx
-
 import React, { useState, useEffect } from 'react';
 import { Quote } from 'lucide-react';
 
-// The TestimonialItem interface is removed
 const testimonials = [
   {
     quote: "NovaStack transformed our archaic infrastructure into a streamlined, cloud-native powerhouse. The efficiency gains were immediate.",
@@ -37,7 +34,6 @@ const testimonials = [
   }
 ];
 
-// The ': React.FC' type annotation is removed
 export const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -45,7 +41,7 @@ export const Testimonials = () => {
     const interval = setInterval(() => {
       // Loop back to 0 when the last item is reached
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000); // Slides every 5 seconds (5000ms)
+    }, 3000); // Slides every 3 seconds (3000ms)
     return () => clearInterval(interval);
   }, []);
 
@@ -93,7 +89,6 @@ export const Testimonials = () => {
 
         {/* Carousel Track */}
         <div className="relative -mx-4">
-            {/* Embed internal CSS for responsive custom property calculation */}
             <style>{`
               #testimonial-track-wrapper {
                 --slide-width: 100%;
