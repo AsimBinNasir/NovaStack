@@ -27,9 +27,6 @@ export const Hero = () => {
               Get Started
               <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button variant="secondary" size="lg">
-              View Solutions
-            </Button>
           </div>
         </div>
 
