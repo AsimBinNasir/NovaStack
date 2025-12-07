@@ -1,8 +1,15 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import  { Button }  from './ui/Button'; 
-
+import { useNavigate } from 'react-router-dom';
 export const Hero = () => {
+  const navigate = useNavigate();
+
+  // Function to handle navigation and smooth scroll to the #contact section on the home page
+  const handleGetStarted = () => {
+    navigate('/services');
+    window.scrollTo( 0,0);
+  };
   return (
     <section id="home" className="min-h-screen flex items-center pt-20 relative overflow-hidden">
       <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 w-[800px] h-[800px] bg-nova-blue/20 rounded-full blur-3xl pointer-events-none mix-blend-overlay"></div>
@@ -23,7 +30,8 @@ export const Hero = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             
-            <Button size="lg" className="group">
+            <Button size="lg" className="group"
+              onClick={handleGetStarted}>
               Get Started
               <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
