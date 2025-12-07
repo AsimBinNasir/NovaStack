@@ -1,8 +1,5 @@
-// ServicesHero.jsx
-
 import React from 'react';
 
-// The ': React.FC' type annotation is removed
 export const ServicesHero = () => {
   return (
     <section className="container mx-auto px-6 py-20 md:py-28 relative">

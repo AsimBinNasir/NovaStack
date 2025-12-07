@@ -9,6 +9,7 @@ export const AboutCTA = () => {
   // Function to handle navigation and smooth scroll to the #contact section on the home page
   const handleContactClick = () => {
     navigate('/contact');
+    window.scrollTo(0,0);
   };
 
   return (
